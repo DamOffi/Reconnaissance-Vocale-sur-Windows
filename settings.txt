@@ -1,0 +1,2 @@
+Microphones : Microphone (Realtek(R) Audio)
+Languages : French
