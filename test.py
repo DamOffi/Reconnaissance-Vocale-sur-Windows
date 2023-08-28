@@ -33,13 +33,12 @@ def set_microphone(name=str):
     
 # Reconnaissance Vocal
 def Voice():
-    print(loop)
+    #print(loop)
     r = sr.Recognizer()
     r.pause_threshold = 0.5
     #print(sr.Microphone().list_microphone_names())
     with sr.Microphone(device_index=indexmic) as source:
         while loop:
-            print("test")
             r.adjust_for_ambient_noise(source)
             audio = r.listen(source, phrase_time_limit=5)
             try:
@@ -66,7 +65,7 @@ def Voice():
                             url = " ".join(url)
                             webbrowser.open("https://www.youtube.com/results?search_query="+url)
             except sr.UnknownValueError:
-                print("erreur")
+                #print("erreur")
                 pass
 
 
